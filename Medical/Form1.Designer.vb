@@ -22,6 +22,7 @@ Partial Class Inventory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PlusItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -29,7 +30,9 @@ Partial Class Inventory
         Me.SearchText = New System.Windows.Forms.ToolStripTextBox()
         Me.SearchInventory = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -116,6 +119,7 @@ Partial Class Inventory
         Me.Text = "Inventory"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -127,4 +131,5 @@ Partial Class Inventory
     Friend WithEvents SearchText As ToolStripTextBox
     Friend WithEvents SearchInventory As ToolStripMenuItem
     Friend WithEvents Label1 As Label
+    Friend WithEvents BindingSource1 As BindingSource
 End Class
